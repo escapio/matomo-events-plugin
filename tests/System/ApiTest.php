@@ -36,7 +36,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->format('Y-m-d')
 					),
 				],
 			],
@@ -52,7 +52,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+2 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
 					),
 				],
 			],
@@ -68,7 +68,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->format('Y-m-d')
 					),
 					'category' => 'Event category 2',
 				],
@@ -85,7 +85,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->format('Y-m-d')
 					),
 					'action_name' => 'Event action 2',
 				],
@@ -102,7 +102,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->format('Y-m-d')
 					),
 					'action_pattern' => 'action 2$',
 				],
@@ -119,7 +119,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->format('Y-m-d')
 					),
 					'lang_id' => 'ko',
 				],
@@ -136,7 +136,7 @@ class ApiTest extends SystemTestCase {
 					'dates' => sprintf(
 						"%s,%s",
 						(new \DateTimeImmutable($date_time))->modify('-1 day')->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+2 day')->format('Y-m-d')
+						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
 					),
 					'order_by_names' => '1',
 				],

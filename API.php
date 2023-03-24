@@ -30,6 +30,9 @@ class API extends \Piwik\Plugin\API {
 			throw new \Exception("Invalid date range format. Should be 'YYYY-MM-DD,YYYY-MM-DD'");
 		}
 		[$_, $date_start, $date_end] = $range;
+		$date_end = (new \DateTimeImmutable($date_end))
+			->modify('+1 day midnight')
+			->format('Y-m-d');
 
 		$database = Db::get();
 		$log_link_visit_action_table = Common::prefixTable("log_link_visit_action");
