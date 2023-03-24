@@ -9,8 +9,6 @@ on:
   pull_request:
     types: [opened, synchronize]
   push:
-    branches:
-      - '**.x-dev'
   workflow_dispatch:
 
 permissions:
