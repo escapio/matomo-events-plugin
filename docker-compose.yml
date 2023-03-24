@@ -11,15 +11,13 @@ services:
     depends_on: [db]
     user: "${UID}:${GID}"
     ports:
-      - "58081:9000"
+      - "${MATOMO_PORT:-9000}:9000"
     command: ["php", "-S", "0.0.0.0:9000"]
 
   db:
     image: mariadb:10.11.2
     command: --max-allowed-packet=64MB
     restart: always
-    ports:
-      - "53306:3306"
     volumes:
       - ./.docker/volumes/db:/var/lib/mysql
     environment:
