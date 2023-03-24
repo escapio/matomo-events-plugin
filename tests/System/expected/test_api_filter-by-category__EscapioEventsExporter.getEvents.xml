@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<result>
+	<row>
+		<category>Event category 2</category>
+		<action>Event action 1</action>
+		<label>Event name 3</label>
+		<count>16</count>
+	</row>
+</result>
