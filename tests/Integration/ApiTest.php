@@ -31,26 +31,26 @@ class ApiTest extends IntegrationTestCase {
 	}
 
 	/** @dataProvider getValidationTestData */
-	public function testValidation($id_site, $date, $expected_error) {
+	public function testValidation($id_site, $dates, $expected_error) {
 		$this->expectException(\Exception::class);
 		$this->expectExceptionMessage($expected_error);
-		$this->api->getEvents($id_site, $date);
+		$this->api->getEvents($id_site, $dates);
 	}
 
 	public static function getValidationTestData() : iterable {
 		yield "id_site: invalid data type" => [
 			'id_side' => 'no integer',
-			'date' => '2023-01-01',
+			'dates' => '2023-01-01',
 			'expected_error' => 'An unexpected website was found in the request',
 		];
 		yield "id_site: unknown id" => [
 			'id_side' => '23',
-			'date' => '2023-01-01',
+			'dates' => '2023-01-01',
 			'expected_error' => 'An unexpected website was found in the request',
 		];
-		yield "date: invalid format" => [
+		yield "dates: invalid date range format" => [
 			'id_side' => '1',
-			'date' => '2023-01-01',
+			'dates' => '2023-01-01',
 			'expected_error' => 'Invalid date range format. Should be \'YYYY-MM-DD,YYYY-MM-DD\'',
 		];
 	}

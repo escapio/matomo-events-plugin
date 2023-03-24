@@ -15,7 +15,7 @@ class API extends \Piwik\Plugin\API {
 
 	public function getEvents(
 		$idSite,
-		$date,
+		$dates,
 		$category = null,
 		$action_name = null,
 		$action_pattern = null,
@@ -25,7 +25,7 @@ class API extends \Piwik\Plugin\API {
 		Site::getSite($idSite); // Check if site exists.
 		Piwik::checkUserHasViewAccess($idSite);
 
-		$range = Range::parseDateRange($date);
+		$range = Range::parseDateRange($dates);
 		if (!$range) {
 			throw new \Exception("Invalid date range format. Should be 'YYYY-MM-DD,YYYY-MM-DD'");
 		}
