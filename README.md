@@ -11,8 +11,7 @@ This plugin allows to export matomo event data with some custom filters like
 Just send HTTP requests to your Matomo instance.
 
 ```http request
-GET https://{MATOMO_BASE_URL}?module=API&method=EscapioEventsExporter.getEvents&idSite=2&date=2023-03-01,
-2023-03-21&token_auth={TOKEN}&format=json
+GET "https://{MATOMO_BASE_URL}?module=API&method=EscapioEventsExporter.getEvents&idSite=2&date=2023-03-01,2023-03-21&token_auth={TOKEN}&format=json"
 ```
 
 ### Mandatory Parameters
