@@ -7,7 +7,6 @@ services:
     volumes:
       - ../..:/var/www/html
       - exclude:/var/www/html/plugins/EscapioEventsExporter/.docker
-      - ./config.ini.php:/var/www/html/config/config.ini.php
     depends_on: [db]
     user: "${UID}:${GID}"
     ports:
