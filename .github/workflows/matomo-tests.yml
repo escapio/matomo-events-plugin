@@ -1,9 +1,9 @@
 # Action for running tests
 # This file has been automatically created.
 # To recreate it you can run this command
-# ./console generate:test-action --plugin="EscapioEventsExporter" --php-versions="7.2,8.2"
+# ./console generate:test-action --plugin="EventsExporter" --php-versions="7.2,8.2"
 
-name: Plugin EscapioEventsExporter Tests
+name: Plugin EventsExporter Tests
 
 on:
   pull_request:
@@ -43,7 +43,7 @@ jobs:
       - name: Run tests
         uses: matomo-org/github-action-tests@main
         with:
-          plugin-name: 'EscapioEventsExporter'
+          plugin-name: 'EventsExporter'
           php-version: ${{ matrix.php }}
           test-type: 'PluginTests'
           matomo-test-branch: ${{ matrix.target }}

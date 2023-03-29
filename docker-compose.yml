@@ -6,7 +6,7 @@ services:
     build: .docker
     volumes:
       - ../..:/var/www/html
-      - exclude:/var/www/html/plugins/EscapioEventsExporter/.docker
+      - exclude:/var/www/html/plugins/EventsExporter/.docker
     depends_on: [db]
     user: "${UID}:${GID}"
     ports:

@@ -6,9 +6,9 @@
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
-namespace Piwik\Plugins\EscapioEventsExporter\tests\Integration;
+namespace Piwik\Plugins\EventsExporter\tests\Integration;
 
-use Piwik\Plugins\EscapioEventsExporter\API;
+use Piwik\Plugins\EventsExporter\API;
 use Piwik\Tests\Framework\Fixture;
 use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
 

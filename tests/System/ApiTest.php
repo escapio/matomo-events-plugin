@@ -1,13 +1,13 @@
 <?php
-namespace Piwik\Plugins\EscapioEventsExporter\tests\System;
+namespace Piwik\Plugins\EventsExporter\tests\System;
 
-use Piwik\Plugins\EscapioEventsExporter\tests\Fixtures\EventsFixture;
+use Piwik\Plugins\EventsExporter\tests\Fixtures\EventsFixture;
 use Piwik\Tests\Framework\TestCase\SystemTestCase;
 
 /**
  * Testing Event Exporter API
  *
- * @group EscapioEventsExporter
+ * @group EventsExporter
  * @group Plugins
  */
 class ApiTest extends SystemTestCase {
@@ -27,7 +27,7 @@ class ApiTest extends SystemTestCase {
 
 		yield "only mandatory params, one day" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_mandatory-params-one-day',
@@ -43,7 +43,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "only mandatory params, multiple days" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_mandatory-params-multiple-days',
@@ -59,7 +59,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "filter by category" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_filter-by-category',
@@ -76,7 +76,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "filter by action" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_filter-by-action',
@@ -93,7 +93,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "filter by action_pattern" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_filter-by-action-pattern',
@@ -110,7 +110,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "filter by lang_id" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_filter-by-lang-id',
@@ -127,7 +127,7 @@ class ApiTest extends SystemTestCase {
 		];
 		yield "order by event names" => [
 			"api" => [
-				'EscapioEventsExporter.getEvents',
+				'EventsExporter.getEvents',
 			],
 			"params" => [
 				"testSuffix" => '_order-by-event-names',

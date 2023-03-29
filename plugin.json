@@ -1,5 +1,5 @@
 {
-  "name": "EscapioEventsExporter",
+  "name": "EventsExporter",
   "description": "Export events more granular",
   "version": "0.1.0",
   "theme": false,

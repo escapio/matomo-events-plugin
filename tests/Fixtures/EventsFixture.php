@@ -5,7 +5,7 @@
  * @link    https://matomo.org
  * @license https://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
-namespace Piwik\Plugins\EscapioEventsExporter\tests\Fixtures;
+namespace Piwik\Plugins\EventsExporter\tests\Fixtures;
 
 use Piwik\Tests\Framework\Fixture;
 

@@ -6,7 +6,7 @@
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  *
  */
-namespace Piwik\Plugins\EscapioEventsExporter;
+namespace Piwik\Plugins\EventsExporter;
 
 use Piwik\{Common, Db, Piwik, Site};
 use Piwik\Period\Range;

@@ -1,4 +1,4 @@
-# Matomo Plugin: EscapioEventsExporter 
+# Matomo Plugin: EventsExporter 
 
 This plugin allows to export matomo event data with some custom filters like
 
@@ -11,18 +11,18 @@ This plugin allows to export matomo event data with some custom filters like
 Just send HTTP requests to your Matomo instance.
 
 ```http request
-GET "https://{MATOMO_BASE_URL}?module=API&method=EscapioEventsExporter.getEvents&idSite=2&date=2023-03-01,2023-03-21&token_auth={TOKEN}&format=json"
+GET "https://{MATOMO_BASE_URL}?module=API&method=EventsExporter.getEvents&idSite=2&date=2023-03-01,2023-03-21&token_auth={TOKEN}&format=json"
 ```
 
 ### Mandatory Parameters
 
-| param      | description                                                                                                                                                                                                 | example value                     |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| module     | parameter to access an matomo API                                                                                                                                                                           | `API`                             |
-| method     | parameter to specify the API method                                                                                                                                                                         | `EscapioEventsExporter.getEvents` |
-| idSite     | the site  id which events should be exports                                                                                                                                                                 | `1`, `2`, ...                     |
-| token_auth | a token generated within the matomo dashboard <br/>to access Matomo via an API. <br/> [See docs](https://developer.matomo.org/api-reference/reporting-api#authenticate-to-the-api-via-token_auth-parameter) |                                   |
-| dates      | Date range. Start and end date with format `YYYY-MM-DD`, separated by comma                                                                                                                                 | `1892-07-25,2022-07-25`           |
+| param      | description                                                                                                                                                                                                 | example value              |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
+| module     | parameter to access an matomo API                                                                                                                                                                           | `API`                      |
+| method     | parameter to specify the API method                                                                                                                                                                         | `EventsExporter.getEvents` |
+| idSite     | the site  id which events should be exports                                                                                                                                                                 | `1`, `2`, ...              |
+| token_auth | a token generated within the matomo dashboard <br/>to access Matomo via an API. <br/> [See docs](https://developer.matomo.org/api-reference/reporting-api#authenticate-to-the-api-via-token_auth-parameter) |                            |
+| dates      | Date range. Start and end date with format `YYYY-MM-DD`, separated by comma                                                                                                                                 | `1892-07-25,2022-07-25`    |
 
 ### Optional parameters
 
@@ -47,13 +47,13 @@ Change into the cloned directory.
 Add this plugin repo as a Git submodule:
 
 ```shell
-git submodule add git@github.com:escapio/matomo-events-plugin.git plugins/EscapioEventsExporter
+git submodule add git@github.com:escapio/matomo-events-plugin.git plugins/EventsExporter
 ```
 
 Change into the plugin's directory.
 
 ```shell
-cd plugins/EscapioEventsExporter
+cd plugins/EventsExporter
 ```
 
 Add the `.env`-file and fill in the environment variables:
@@ -104,7 +104,7 @@ disable_merged_assets = 1
 After that you can execute the plugin's tests by running following command
 
 ```shell
-docker compose exec php /var/www/html/console tests:run EscapioEventsExporter
+docker compose exec php /var/www/html/console tests:run EventsExporter
 ```
 
 ## Sources
