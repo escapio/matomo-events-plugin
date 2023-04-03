@@ -34,6 +34,12 @@ GET "https://{MATOMO_BASE_URL}?module=API&method=EventsExporter.getEvents&idSite
 | order_by_names | By default the result is sorted by the amount of each unique event in descending order. <br/> By setting this parameter the resuls will be sorted by <br/> category-name, action-name, label-name | `1`                   |
 | lang_id        | With this parameter the results are filtered by the prefix of the `idaction_url` which is in most <br/>cases a lang id within an url like `de.example.com`                                        | `de`, `en`, `es`, ... |
 
+## License
+
+This plugin is released under the GPL v3 license, see [LICENSE](LICENSE).
+
+The template for plugin was generated with the CLI helper tools from [Matomo](https://github.com/matomo-org/matomo).
+
 ## Contributing
 
 ### Development
