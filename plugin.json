@@ -1,7 +1,7 @@
 {
   "name": "EventsExporter",
   "description": "Export events more granular",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "theme": false,
   "require": {
     "matomo": ">=4.14.0-rc1,<5.0.0-b1"
@@ -10,7 +10,7 @@
     {
       "name": "Escapio IT",
       "email": "it@escapio.com",
-      "homepage": "escapio.com"
+      "homepage": "https://github.com/escapio/matomo-events-plugin"
     }
   ],
   "support": {
@@ -23,7 +23,7 @@
     "docs": "",
     "rss": ""
   },
-  "homepage": "escapio.com",
+  "homepage": "https://github.com/escapio/matomo-events-plugin",
   "license": "GPL v3+",
   "keywords": []
 }
