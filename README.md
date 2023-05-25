@@ -16,13 +16,14 @@ GET "https://{MATOMO_BASE_URL}?module=API&method=EventsExporter.getEvents&idSite
 
 ### Mandatory Parameters
 
-| param      | description                                                                                                                                                                                                 | example value              |
-|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| module     | parameter to access an matomo API                                                                                                                                                                           | `API`                      |
-| method     | parameter to specify the API method                                                                                                                                                                         | `EventsExporter.getEvents` |
-| idSite     | the site  id which events should be exports                                                                                                                                                                 | `1`, `2`, ...              |
-| token_auth | a token generated within the matomo dashboard <br/>to access Matomo via an API. <br/> [See docs](https://developer.matomo.org/api-reference/reporting-api#authenticate-to-the-api-via-token_auth-parameter) |                            |
-| dates      | Date range. Start and end date with format `YYYY-MM-DD`, separated by comma                                                                                                                                 | `1892-07-25,2022-07-25`    |
+| param      | description                                                                                                                                                                                                 | example value                     |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| module     | parameter to access an matomo API                                                                                                                                                                           | `API`                             |
+| method     | parameter to specify the API method                                                                                                                                                                         | `EventsExporter.getEvents`        |
+| idSite     | the site  id which events should be exports                                                                                                                                                                 | `1`, `2`, ...                     |
+| token_auth | a token generated within the matomo dashboard <br/>to access Matomo via an API. <br/> [See docs](https://developer.matomo.org/api-reference/reporting-api#authenticate-to-the-api-via-token_auth-parameter) |                                   |
+| date       | Param to define the date (range). Also relative dates are supported [See docs](https://developer.<br/>matomo.org/api-reference/reporting-api#standard-api-parameters)                                       | `1892-07-25,2022-07-25`, `last10` |
+| period     | Param to define the date period [See docs](https://developer.<br/>matomo.org/api-reference/reporting-api#standard-api-parameters)                                                                           | `1892-07-25,2022-07-25`           |
 
 ### Optional parameters
 

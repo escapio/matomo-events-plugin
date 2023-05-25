@@ -15,22 +15,24 @@ class API extends \Piwik\Plugin\API {
 
 	public function getEvents(
 		$idSite,
-		$dates,
+		$date,
 		$category = null,
 		$action_name = null,
 		$action_pattern = null,
 		$order_by_names = false,
-		$lang_id = null
+		$lang_id = null,
+		$period = 'range'
 	) {
 		Site::getSite($idSite); // Check if site exists.
 		Piwik::checkUserHasViewAccess($idSite);
 
-		$range = Range::parseDateRange($dates);
-		if (!$range) {
+		$range = new Range($period, $date);
+		if (!$range->getDateStart() || !$range->getDateEnd()) {
 			throw new \Exception("Invalid date range format. Should be 'YYYY-MM-DD,YYYY-MM-DD'");
 		}
-		[$_, $date_start, $date_end] = $range;
-		$date_end = (new \DateTimeImmutable($date_end))
+		$date_start = (new \DateTimeImmutable($range->getDateStart()))
+			->format('Y-m-d');
+		$date_end = (new \DateTimeImmutable($range->getDateEnd()))
 			->modify('+1 day midnight')
 			->format('Y-m-d');
 

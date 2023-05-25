@@ -32,13 +32,11 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_mandatory-params-one-day',
 				'idSite' => $id_site,
-				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->format('Y-m-d')
-					),
-				],
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->format('Y-m-d')
+				),
 			],
 		];
 		yield "only mandatory params, multiple days" => [
@@ -48,13 +46,11 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_mandatory-params-multiple-days',
 				'idSite' => $id_site,
-				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
-					),
-				],
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+				),
 			],
 		];
 		yield "filter by category" => [
@@ -64,12 +60,12 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_filter-by-category',
 				'idSite' => $id_site,
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->format('Y-m-d')
+				),
 				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->format('Y-m-d')
-					),
 					'category' => 'Event category 2',
 				],
 			],
@@ -81,12 +77,12 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_filter-by-action',
 				'idSite' => $id_site,
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->format('Y-m-d')
+				),
 				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->format('Y-m-d')
-					),
 					'action_name' => 'Event action 2',
 				],
 			],
@@ -98,12 +94,12 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_filter-by-action-pattern',
 				'idSite' => $id_site,
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->format('Y-m-d')
+				),
 				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->format('Y-m-d')
-					),
 					'action_pattern' => 'action 2$',
 				],
 			],
@@ -115,12 +111,12 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_filter-by-lang-id',
 				'idSite' => $id_site,
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->format('Y-m-d')
+				),
 				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->format('Y-m-d')
-					),
 					'lang_id' => 'ko',
 				],
 			],
@@ -132,12 +128,12 @@ class ApiTest extends SystemTestCase {
 			"params" => [
 				"testSuffix" => '_order-by-event-names',
 				'idSite' => $id_site,
+				'date' => sprintf(
+					"%s,%s",
+					(new \DateTimeImmutable($date_time))->modify('-1 day')->format('Y-m-d'),
+					(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
+				),
 				'otherRequestParameters' => [
-					'dates' => sprintf(
-						"%s,%s",
-						(new \DateTimeImmutable($date_time))->modify('-1 day')->format('Y-m-d'),
-						(new \DateTimeImmutable($date_time))->modify('+1 day')->format('Y-m-d')
-					),
 					'order_by_names' => '1',
 				],
 			],
