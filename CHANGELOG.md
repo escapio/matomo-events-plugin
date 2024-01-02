@@ -2,6 +2,12 @@
 
 Here goes the changelog text.
 
+## [3.0.0](https://github.com/escapio/matomo-events-plugin/compare/v3.0.0...v2.0.0) (2024-01-02)
+
+### Breaking Changes
+
+- update Matomo to version 5
+
 ## [2.0.0](https://github.com/escapio/matomo-events-plugin/compare/v1.1.0...v2.0.0) (2023-05-25) 
 
 ### Breaking Changes
